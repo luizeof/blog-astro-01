@@ -38,21 +38,37 @@ const {
 } = Astro.props
 ---
 
-<Card classes={classes}>
-	{image && <Image src={image} alt={title} width={600} height={400} />}
+<Card classes={classes + " relative group transition-all duration-300 hover:shadow-2xl hover:shadow-neutral-200/50 dark:hover:shadow-neutral-900/50 hover:-translate-y-1"}>
+	{
+		image && (
+			<div class="block overflow-hidden">
+				<Image
+					src={image}
+					alt={title}
+					width={600}
+					height={400}
+					class="transition-transform duration-500 group-hover:scale-105"
+				/>
+			</div>
+		)
+	}
 	<CardBody>
 		<h3 class="post-title">
-			<a href={link}>{title}</a>
+			<a href={link} class="stretched-link group-hover:text-primary-500 transition-colors">
+				{title}
+			</a>
 		</h3>
 		<h4 class="post-subtitle">{subtitle}</h4>
-		<slot />
+		<div class="line-clamp-3">
+			<slot />
+		</div>
 	</CardBody>
 
 	{
 		tags && (
-			<div class="post-tags">
+			<div class="post-tags relative z-10">
 				{tags.map((tag: string) => (
-					<Badge name={tag} link={`/blog/tags/` + tag} classes="capitalize" />
+					<Badge name={tag} link={`/blog/tags/` + tag} classes="capitalize hover:bg-primary-500 hover:text-white transition-colors" />
 				))}
 			</div>
 		)
@@ -60,6 +76,15 @@ const {
 </Card>
 
 <style>
+	.stretched-link::after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+		content: "";
+	}
 	.post-title {
 		@apply mb-0 text-xl [&_a]:text-inherit;
 	}
