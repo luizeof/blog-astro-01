@@ -18,6 +18,8 @@ export interface Config {
 	noindex: boolean
 	mode: Mode
 	scrollAnimations: boolean
+	postsPerPage: number
+	changelogPerPage: number
 }
 
 export const configData: Config = {
@@ -32,5 +34,7 @@ export const configData: Config = {
 	canonical: true,
 	noindex: false,
 	mode: 'auto',
-	scrollAnimations: true
+	scrollAnimations: true,
+	postsPerPage: 3,
+	changelogPerPage: 3
 }
