@@ -35,6 +35,6 @@ export const configData: Config = {
 	noindex: false,
 	mode: 'auto',
 	scrollAnimations: true,
-	postsPerPage: 6,
-	changelogPerPage: 10
+	postsPerPage: 3,
+	changelogPerPage: 3
 }
