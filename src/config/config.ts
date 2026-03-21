@@ -23,18 +23,18 @@ export interface Config {
 }
 
 export const configData: Config = {
-	siteTitle: 'Foxi. Tailwind CSS Astro Starter Kit by Oxygenna',
+	siteTitle: 'Promovaweb | Marketing Digital e Tecnologia',
 	siteDescription:
-		'Foxi is a design and development agency that specializes in creating beautiful and functional websites.',
+		'Promovaweb ajuda você a escalar seu negócio com soluções de marketing digital, cursos e tecnologia.',
 	ogImage: '/og.jpg',
 	logo: {
 		src: '/logo.svg',
-		alt: 'Foxi. logo'
+		alt: 'Promovaweb logo'
 	},
 	canonical: true,
 	noindex: false,
 	mode: 'auto',
 	scrollAnimations: true,
-	postsPerPage: 3,
-	changelogPerPage: 3
+	postsPerPage: 6,
+	changelogPerPage: 10
 }

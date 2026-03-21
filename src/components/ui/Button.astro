@@ -19,7 +19,7 @@ type Props = {
 	size?: 'lg' | 'base' | 'sm'
 	link?: string
 	modal?: string
-	style?: 'primary' | 'secondary' | 'neutral' | 'white'
+	style?: 'primary' | 'secondary' | 'neutral' | 'white' | 'accent'
 	variation?: 'outline' | 'link'
 	elevated?: boolean
 	classes?: string
@@ -101,6 +101,10 @@ const {
 
 	.button--neutral {
 		@apply bg-neutral-700 text-white hover:bg-neutral-800 focus:bg-neutral-900 disabled:border-neutral-300 disabled:bg-neutral-300 [&.button--elevated]:shadow-neutral-500/30 [&.button--elevated]:hover:shadow-neutral-500/30 [&.button--elevated]:focus:shadow-neutral-500/30 [&.button--link]:bg-transparent [&.button--link]:text-neutral-700 hover:[&.button--link]:text-neutral-800 focus:[&.button--link]:text-neutral-900 [&.button--outline]:border-neutral-700 [&.button--outline]:bg-transparent [&.button--outline]:text-neutral-700 [&.button--outline]:hover:border-neutral-800 [&.button--outline]:hover:text-neutral-800;
+	}
+
+	.button--accent {
+		@apply bg-accent-500 text-white hover:bg-accent-700 focus:bg-accent-700 disabled:border-accent-300 disabled:bg-accent-300 [&.button--elevated]:shadow-lg [&.button--elevated]:shadow-accent-500/30 [&.button--elevated]:hover:shadow-accent-500/30 [&.button--elevated]:focus:shadow-accent-500/30 [&.button--link]:bg-transparent [&.button--link]:text-accent-500 hover:[&.button--link]:text-accent-600 focus:[&.button--link]:text-accent-600 [&.button--outline]:border-accent-500 [&.button--outline]:bg-transparent [&.button--outline]:text-accent-500 [&.button--outline]:hover:border-accent-600 [&.button--outline]:hover:text-accent-600;
 	}
 
 	.button--white {

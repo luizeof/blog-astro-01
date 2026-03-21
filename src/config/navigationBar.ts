@@ -35,7 +35,7 @@ export const navigationBarData: NavData = {
 	logo: {
 		src: '/logo.svg',
 		alt: 'The tailwind astro theme',
-		text: 'Foxi.'
+		text: 'Promovaweb.'
 	},
 	navItems: [
 		{ name: 'Home', link: '/' },
