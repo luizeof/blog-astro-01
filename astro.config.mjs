@@ -12,4 +12,9 @@ export default defineConfig({
   site: "https://foxi.netlify.app",
   integrations: [icon(), sitemap(), mdx()],
   adapter: cloudflare(),
+  vite: {
+    ssr: {
+      noExternal: true,
+    },
+  },
 });
